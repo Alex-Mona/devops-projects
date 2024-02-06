@@ -148,13 +148,13 @@ deploy:
 
 ## Part 6. Дополнительно. Уведомления
 
-create telegram bot using @BotFather
+Создать бота для Telegram, используя @BotFather
 
-get the bot's token and use it in our script from materials/notification.md (see src/notify.sh)
+Получить токен бота и использовать его в нашем скрипте из materials/notification.md (смотри src/notify.sh)
 
-add telegram profile id and job_status ($CI_JOB_STATUS) to the script
+Добавить идентификатор профиля Telegram и job_status ($CI_JOB_STATUS) к скрипту
 
-add this to every job in .gitlab-ci.yml:
+Добавьте это к каждой работе в .gitlab-ci.yml:
 ```
   after_script:
     - sh src/notify.sh "job_name"
